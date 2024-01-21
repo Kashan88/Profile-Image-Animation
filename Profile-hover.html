@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .profile{
+      position: relative;
+      transition: all .3s;
+      &:hover{
+        transform: translateY(25px);
+      }
+    }
+    img{
+      width: 100px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .name{
+      position: absolute;
+      background-color: #891099;
+      color: #fff;
+      font-family: "poppins",sans-serif;
+      padding: 15px 30px;
+      border-radius: 100px;
+      bottom: -80px;
+      left: 50%;
+      white-space: nowrap;
+      transform: translate(-50%,-50%);
+      letter-spacing: 1px;
+      font-size: 20px;
+      opacity: 0;
+      transition: all .3s;
+      &:before{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #570d74;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+    }
+    img:hover +.name{
+      opacity: 1;
+      transform: translateX(-50%);
+      box-shadow: 0 10px 20px 
+      rgba(86,86,198.0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="profile">
+        <img src="Images/person-1.avif" alt="">
+        <span class="name">person 1</span>
+      </div>
+      <div class="profile">
+        <img src="Images/person-2.avif" alt="">
+        <span class="name">person 2</span>
+      </div>
+      <div class="profile">
+        <img src="Images/person-3.avif" alt="">
+        <span class="name">person 3</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
